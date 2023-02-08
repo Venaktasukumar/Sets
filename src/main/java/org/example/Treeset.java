@@ -25,7 +25,8 @@ public class Treeset {
         l.info("Printing the elements by using iterator");
         Iterator<String> k=t.iterator();
         while(k.hasNext()){
-            l.info(k.next());
+            String s=k.next();
+            l.info(s);
         }
         t.clear();
         l.log(Level.INFO,()->""+t);

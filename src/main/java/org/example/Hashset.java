@@ -24,7 +24,8 @@ public class Hashset{
         l.info("printing the elements By using iterator");
         Iterator<String> k=hashset.iterator();
         while(k.hasNext()){
-            l.info(k.next());
+            String s=k.next();
+            l.info(s);
         }
         hashset.clear();
         l.log(Level.INFO,()->""+hashset);

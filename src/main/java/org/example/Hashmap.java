@@ -7,12 +7,11 @@ public class Hashmap {
         Logger l= Logger.getLogger("com.api.jar");
         HashMap<String, String> hash=new HashMap<String, String>();
         hash.put("England","London");
-        hash.put("India","NewDelhi");
+        hash.put("India","Delhi");
         hash.put("USA","Washington DC");
         hash.put("Germany","Berlin");
         l.log(Level.INFO,()->""+hash);
-        l.info(hash.get("England"));
-        l.info(hash.get("India"));
+        l.info(hash.get("USA"));
         hash.remove("Germany");
         l.log(Level.INFO,()->""+hash);
         l.log(Level.INFO,()->""+hash.size());
@@ -24,15 +23,12 @@ public class Hashmap {
         for(String i:hash.values()){
             l.info(i);
         }
-        l.info("Printing values and keys:");
-        for(String i:hash.keySet()){
-            l.info("Key:"+i+" Value:"+hash.get(i));
-        }
-        hash.replace("England","Britan");
+        hash.replace("India","NewDelhi");
         l.log(Level.INFO,()->""+hash);
         Iterator<String> it=hash.keySet().iterator();
         while(it.hasNext()){
-            l.info(it.next());
+            String s=it.next();
+            l.info(s);
         }
         hash.clear();
         l.log(Level.INFO,()->""+hash);
